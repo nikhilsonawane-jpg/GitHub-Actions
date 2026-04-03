@@ -1,6 +1,6 @@
 name: self hosted
 on:
-  workflow_dispatch
+  push:
 env:
   Name: nginx
 jobs:
