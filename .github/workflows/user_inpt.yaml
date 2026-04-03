@@ -11,11 +11,13 @@ on:
         required: true
 jobs:
   print:
-    run:
-      if: ${{github.event.inputs.age < 18}}
-      echo: |
-        "you are minor"
-    run:
-      if: ${{github.event.inputs.age > 18}}
-      echo: |
-        "Hello ${{ github.event.inputs.name }}, you are in!"
+    runs-on: ubuntu-latest
+    steps:
+      - name: handle minor
+        if: ${{github.event.inputs.age < 18}}
+        run: |
+        echo "you are minor"
+      - name: handle adult
+        if: ${{github.event.inputs.age > 18}}
+        run: |
+        echo "Hello ${{ github.event.inputs.name }}, you are in!"
