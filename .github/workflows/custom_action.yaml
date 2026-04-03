@@ -11,6 +11,6 @@ jobs:
   steps:
     - name: list
       uses: ./.github/actions/custom/action.yaml
-        with:
-          path: ${{github.event.inputs.path}}
+      with:
+        path: ${{github.event.inputs.path}}
     
