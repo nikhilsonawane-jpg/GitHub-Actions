@@ -1,13 +1,16 @@
 name: self hosted
+
 on:
   push:
+
 env:
   Name: nginx
+
 jobs:
   install:
     runs-on: self-hosted
     steps:
-      - name:
-        run: | 
-          sudo apt install $Name -y
-  
+      - name: Update and Install Nginx
+        run: |
+          sudo apt update -y
+          sudo apt install ${{ env.Name }} -y
