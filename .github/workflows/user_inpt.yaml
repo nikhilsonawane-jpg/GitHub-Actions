@@ -1,0 +1,21 @@
+name: User inputs
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Enter your name"
+        default: "Admin"
+        required: true
+      age:
+        description: "Whats your age"
+        required: true
+jobs:
+  print:
+    run:
+      if: ${{github.event.inputs.age < 18}}
+      echo: |
+        "you are minor"
+    run:
+      if: ${{github.event.inputs.age > 18}}
+      echo: |
+        "Hello ${{ github.event.inputs.name }}, you are in!"
