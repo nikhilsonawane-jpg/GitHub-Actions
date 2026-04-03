@@ -8,9 +8,9 @@ on:
 jobs: 
   list:
     runs-on: self-hosted
-  steps:
-    - name: list
-      uses: ./.github/actions/custom/action.yaml
-      with:
-        path: ${{github.event.inputs.path}}
+    steps:
+      - name: list
+        uses: ./.github/actions/custom/action.yaml
+        with:
+          path: ${{github.event.inputs.path}}
     
