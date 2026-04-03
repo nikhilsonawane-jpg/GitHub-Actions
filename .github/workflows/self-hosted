@@ -1,0 +1,11 @@
+name: self hosted
+on:
+  workflow_dispatch
+env:
+  Name: nginx
+jobs:
+  install:
+    runs-on: self-hosted
+  run: | 
+    sudo apt install $Name -y
+  
