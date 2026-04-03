@@ -1,5 +1,6 @@
 name: User inputs
-on: 
+
+on:
   workflow_dispatch:
     inputs:
       name:
@@ -9,13 +10,17 @@ on:
       age:
         description: "Whats your age"
         required: true
+
 jobs:
   print:
     runs-on: ubuntu-latest
     steps:
       - name: handle minor
-        if: ${{github.event.inputs.age < 18}}
+        # Condition: Age is strictly less than 18
+        if: ${{ github.event.inputs.age < 18 }}
         run: echo "you are minor"
+
       - name: handle adult
-        if: ${{github.event.inputs.age > 18}}
+        # Condition: Age is 18 or older
+        if: ${{ github.event.inputs.age >= 18 }}
         run: echo "Hello ${{ github.event.inputs.name }}, you are in!"
