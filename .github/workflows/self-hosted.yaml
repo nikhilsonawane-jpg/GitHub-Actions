@@ -7,6 +7,11 @@ env:
   Name: nginx
 
 jobs:
+  checkout:
+    runs-on: self-hosted
+    steps:
+      - name: checkout 
+        uses: actions/checkout@v4
   install:
     runs-on: self-hosted
     steps:
