@@ -1,17 +1,14 @@
 name: custom action
-on:
-  workflow_dispatch:
-    inputs: 
-      path:
-        description: "Whats your path"
-        required: true
-jobs:
-  list:
-    runs-on: self-hosted
-    steps:
-      - name: list
-        run: |
-          ls -ltr ${{github.event.inputs.path}} > /home/ubuntu/path.txt
 
-  
-  
+inputs:
+  path:
+    description: "Whats your path"
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: List files
+      shell: bash
+      run: |
+        ls -ltr "${{ inputs.path }}" > /home/ubuntu/path.txt
