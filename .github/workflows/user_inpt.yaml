@@ -15,9 +15,7 @@ jobs:
     steps:
       - name: handle minor
         if: ${{github.event.inputs.age < 18}}
-        run: |
-        echo "you are minor"
+        run: echo "you are minor"
       - name: handle adult
         if: ${{github.event.inputs.age > 18}}
-        run: |
-        echo "Hello ${{ github.event.inputs.name }}, you are in!"
+        run: echo "Hello ${{ github.event.inputs.name }}, you are in!"
