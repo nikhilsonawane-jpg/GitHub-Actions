@@ -1,4 +1,4 @@
-name: selfh hosted
+name: self hosted
 
 on:
   push:
