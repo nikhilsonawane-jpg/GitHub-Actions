@@ -1,7 +1,7 @@
 name: Real Pipeline
 
 on: 
-  workflow_dispatch
+  workflow_dispatched
 
 jobs:
   version:
