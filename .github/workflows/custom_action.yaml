@@ -1,0 +1,16 @@
+name: custom action
+on:
+  workflow_dispatch:
+    inputs:
+      path:
+        description: "Enter path to list"
+        required: true
+jobs: 
+  list:
+    runs-on: self-hosted
+  steps:
+    - name: list
+      uses: ./.github/actions/custom/action.yaml
+        with:
+          path: ${{github.event.inputs.path}}
+    
