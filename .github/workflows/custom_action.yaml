@@ -9,8 +9,13 @@ jobs:
   list:
     runs-on: self-hosted
     steps:
+     
+      # STEP 1: This pulls your code (including the .github folder) onto the runner
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+     
       - name: list
-        uses: ./.github/actions/custom/action.yaml
+        uses: ./.github/actions/custom
         with:
           path: ${{github.event.inputs.path}}
     
