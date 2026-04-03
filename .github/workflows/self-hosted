@@ -6,8 +6,8 @@ env:
 jobs:
   install:
     runs-on: self-hosted
-  steps:
-    - name:
-      run: | 
-        sudo apt install $Name -y
+    steps:
+      - name:
+        run: | 
+          sudo apt install $Name -y
   
