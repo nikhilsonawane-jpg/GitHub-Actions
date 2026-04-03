@@ -16,7 +16,7 @@ jobs:
           sudo apt install ${{ env.Name }} -y
       - name: install webpage
         run: | 
-          <h1> Im Devops Enigneer now </h1> > /var/www/html/index.html
+          echo "<h1> Im Devops Enigneer now </h1>" > /var/www/html/index.html
       - name: 
         run: |
           systemctl restart nginx 
