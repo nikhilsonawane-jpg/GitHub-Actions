@@ -1,6 +1,7 @@
 name: Real Pipeline
 
-on: push
+on: 
+  workflow_dispatch
 
 jobs:
   version:
