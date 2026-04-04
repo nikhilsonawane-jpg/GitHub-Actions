@@ -2,7 +2,7 @@ name: Scheduled Job Demo
 
 on:
   schedule:
-    - cron: "* * * * *"   # runs every minute (for testing)
+    - cron: "*/2 * * * *" 
 
 jobs:
   run-cron:
