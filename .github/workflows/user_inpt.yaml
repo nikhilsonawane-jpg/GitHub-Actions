@@ -7,9 +7,11 @@ on:
         description: "Enter your name"
         default: "Admin"
         required: true
+        type: string
       age:
         description: "Whats your age"
         required: true
+        type: int
 
 jobs:
   print:
