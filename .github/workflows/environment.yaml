@@ -1,0 +1,11 @@
+name: environment secrets
+on: 
+  workflow_dispatch
+
+jobs:
+  environment:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      run: |
+        echo "hello ${{secrets.Name}} and ${{secrets.Pass}}"
