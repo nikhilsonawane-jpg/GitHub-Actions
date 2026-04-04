@@ -1,0 +1,19 @@
+name: call input workflow
+
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Enter name"
+        require: true
+      age:
+        description: "Enter age"
+        required: true
+jobs:
+  call:
+    runs-on: ubuntu-latest
+    steps:
+      uses: ./.github/workflows/user_inpt.yaml
+      with:
+        name: ${{github.event.inputs.name}}
+        age: ${{github.event.inputs.age}}
