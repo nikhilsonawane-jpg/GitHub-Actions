@@ -24,5 +24,5 @@ jobs:
 
       - name: handle adult
         # Condition: Age is 18 or older
-        if: ${{ github.event.inputs.age >= 18 }}
+        if: ${{ inputs.age >= 18 }}
         run: echo "Hello ${{ inputs.name }}.. you are in!"
