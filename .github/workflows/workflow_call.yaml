@@ -11,9 +11,7 @@ on:
         required: true
 jobs:
   call:
-    runs-on: ubuntu-latest
-    steps:
-      uses: ./.github/workflows/user_inpt.yaml
-      with:
-        name: ${{github.event.inputs.name}}
-        age: ${{github.event.inputs.age}}
+    uses: ./.github/workflows/user_inpt.yaml
+    with:
+      name: ${{github.event.inputs.name}}
+      age: ${{github.event.inputs.age}}
