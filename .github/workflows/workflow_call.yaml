@@ -5,7 +5,7 @@ on:
     inputs:
       name:
         description: "Enter name"
-        require: true
+        required: true
       age:
         description: "Enter age"
         required: true
