@@ -1,0 +1,13 @@
+name: Scheduled Job Demo
+
+on:
+  schedule:
+    - cron: "* * * * *"   # runs every minute (for testing)
+
+jobs:
+  run-cron:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Time
+        run: date
