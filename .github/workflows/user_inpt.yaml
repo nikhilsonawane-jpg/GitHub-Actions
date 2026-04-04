@@ -11,7 +11,7 @@ on:
       age:
         description: "Whats your age"
         required: true
-        type: number
+        type: string
 
 jobs:
   print:
