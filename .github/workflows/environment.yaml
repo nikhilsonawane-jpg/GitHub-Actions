@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: Production
     steps:
-      run: |
-        echo "hello ${{secrets.Name}} and ${{secrets.Pass}}"
+      - name: run
+
+        run: |
+          echo "hello ${{secrets.Name}} and ${{secrets.Pass}}"
