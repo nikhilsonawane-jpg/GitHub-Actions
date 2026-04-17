@@ -1,7 +1,7 @@
 name: Real Pipeline
 
 on:
-  workflow_dispatch # Added the colon here
+  workflow_dispatch 
 
 jobs:
   version:
